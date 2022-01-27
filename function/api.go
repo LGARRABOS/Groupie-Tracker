@@ -8,7 +8,7 @@ import  (
 )
 
 type ArtistStruct struct {
-	tab []Artist
+	Tab []Artist
 }
 
 type Artist struct {
@@ -22,7 +22,7 @@ type Artist struct {
 
 var ArtistTab []Artist
 
-func APIRequest() {
+func APIRequest() ArtistStruct {
 	req, err := http.Get("https://groupietrackers.herokuapp.com/api/artists")
 
 	if err != nil {
@@ -34,5 +34,10 @@ func APIRequest() {
 	if err2 != nil {
 		fmt.Println(err2)
 	}
-	json.Unmarshal(d, &ArtsitTab)
+	json.Unmarshal(d, &ArtistTab)
+	data := ArtistStruct {
+		Tab: ArtistTab,
+	}
+	return data
+
 }
