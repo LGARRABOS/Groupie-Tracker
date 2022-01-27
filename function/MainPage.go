@@ -12,6 +12,5 @@ func MainHandler(http ReponseWriter, r *http.Request ) {
 	data := ArtisStruct {
 		Tab: ArtistTab
 	}
-	
 	tmpl.Execute(w, data)
 }

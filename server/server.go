@@ -9,5 +9,5 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	http.ListenAndServe("localhost:8080", nil)
-	g.MainHandler()
+	g.MainHandler(http ReponseWriter, r *http.Request)
 }
