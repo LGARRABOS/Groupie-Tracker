@@ -18,11 +18,14 @@ type Artist struct {
 	Member []string`json:"members"`
 	CreationDate int`json:"creationDate"`
 	FirstAlbum string `json:"firstAlbum"`
+	Locations string `json:"locations"`
+	ConcertDates string `json:"concertDates"`
+	Relations string `json:"relations"`
 }
 
 var ArtistTab []Artist
 
-func APIRequest() ArtistStruct {
+func APIRequestArtist() ArtistStruct {
 	req, err := http.Get("https://groupietrackers.herokuapp.com/api/artists")
 
 	if err != nil {
