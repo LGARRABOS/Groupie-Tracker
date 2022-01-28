@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/static/index.css">
     <title>Groupie Tracker</title>
-    
+
 </head>
 
 <body>
@@ -37,8 +37,28 @@
         <span></span>
         <span></span>
         <span></span>
-     </div>
-    {{ range .Tab }}
-    <h1>{{ .Name }}</h1>
-    {{ end }}
+    </div>
+    <div>
+        {{ range .Tab }}
+        <h2>{{ .Name }}</h2>
+        <br></br>
+        <h3> Id </h3>
+        <p>{{ .Id }}</p>
+        <h3> Member </h3>
+        <p> {{ range .Member }}
+            {{ . }}
+            <br></br>
+            {{end}}
+        </p>
+        <h3> Creation </h3>
+        <p> {{ .CreationDate }} </p>
+        <h3> First album </h3>
+        <p> {{ .FirstAlbum }} </p>
+        <img class="image" src="{{ .Image }}">
+
+
+        <p> </p>
+        {{ end }}
+    </div>
+
 </body>
