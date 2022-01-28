@@ -15,14 +15,7 @@
     <p class="home">Find here the next concert dates of your favorite bands.</p>
     <div>
         {{ range .Tab }}
-        <br></br>
         <h2>{{ .Name }}</h2>
-        {{ end }}
-    </div>
-    <div>
-        {{ range .Tab }}
-        <h2>{{ .Name }}</h2>
-        <br></br>
         <h3> Id </h3>
         <p>{{ .Id }}</p>
         <h3> Member </h3>
@@ -36,13 +29,14 @@
         <h3> First album </h3>
         <p> {{ .FirstAlbum }} </p>
         <img class="image" src="{{ .Image }}">
-        <h3> Locations </h3>
-        <p> {{ .Locations }} </p>
-        <h3> Concert Dates </h3>
-        <p> {{ .ConcertDates }} </p>
-        <h3> Relations </h3>
-        <p> {{ .Relations }} </p>
-
+        <h3>
+            <a href="{{ .Locations }}">Locations</a>
+            <br></br>
+            <a href="{{ .ConcertDates }}">Concert Dates</a>
+            <br></br>
+            <a href="{{ .Relations }}">Relations</a>
+            <br></br>
+        </h3>
         {{ end }}
     </div>
 
