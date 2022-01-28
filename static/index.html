@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/index.css">
     <title>Groupie Tracker</title>
-    
+
 </head>
 
 <body>
+    <h1>Groupie Tracker</h1>
+    <p class="home">Find here the next concert dates of your favorite bands.</p>
+     <div>
     {{ range .Tab }}
-    <h1>{{ .Name }}</h1>
+    <br></br>
+    <h2>{{ .Name }}</h2>
     {{ end }}
+    </div>
 </body>

@@ -15,9 +15,9 @@ type Artist struct {
 	Id	int `json:"id"`
 	Image string `json:"image"`
 	Name string `json:"name"`
-	Menber []string`json:"members"`
+	Member []string`json:"members"`
 	CreationDate int`json:"creationDate"`
-	FrstAlbum string `json:"firstAlbum"`
+	FirstAlbum string `json:"firstAlbum"`
 }
 
 var ArtistTab []Artist
