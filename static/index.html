@@ -11,32 +11,13 @@
 </head>
 
 <body>
-    <div class="fond">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <h1>Groupie Tracker</h1>
+    <p class="home">Find here the next concert dates of your favorite bands.</p>
+    <div>
+        {{ range .Tab }}
+        <br></br>
+        <h2>{{ .Name }}</h2>
+        {{ end }}
     </div>
     <div>
         {{ range .Tab }}
