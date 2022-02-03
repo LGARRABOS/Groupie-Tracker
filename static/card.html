@@ -8,6 +8,18 @@
     <title>**Nom du groupe**</title>
 </head>
 <body>
-
+    {{ range .Tab }}
+        <div class = container>
+          <div class = card>
+            <div class = image>
+              <img href = "#" src = "{{ .Image }}">
+            </div>
+            <div class = content>
+              <h3>This is content</h3>
+              <p>DIn publishing and graphic design,           Lorem ipsum is a placeholder text               commonly used to demonstrate the visual         form of a document or a typeface without         relying on meaningful content.</p>
+            </div>
+          </div>
+          {{end}}    
+        </div>
 </body>
 </html>
