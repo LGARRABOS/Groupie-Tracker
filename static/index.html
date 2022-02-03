@@ -12,23 +12,25 @@
 
 <body>
     <h1>Groupie Tracker</h1>
-    <p class="home">Find here the next concert dates of your favorite bands.</p>
+    <h1>Find here the next concert dates of your favorite bands.</h1>
     <div>
         {{ range .Tab }}
-        <h2>{{ .Name }}</h2>
-        <h3> Id </h3>
-        <p>{{ .Id }}</p>
-        <h3> Member </h3>
-        <p> {{ range .Member }}
-            {{ . }}
-            <br></br>
-            {{end}}
-        </p>
-        <h3> Creation </h3>
-        <p> {{ .CreationDate }} </p>
-        <h3> First album </h3>
-        <p> {{ .FirstAlbum }} </p>
-        <img class="image" src="{{ .Image }}">
+
+        <div class="container">
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <img class="image" src="{{ .Image }}">
+                    <h3>{{ .Name }}</h3>
+                  <h3> Member </h3>
+                  <p>{{ range .Member }}
+                    {{ . }}
+                    <br></br>
+                    {{end}}</p>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
         <h3>
             <a href="{{ .Locations }}">Locations</a>
             <br></br>
