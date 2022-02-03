@@ -11,33 +11,45 @@
 </head>
 
 <body>
-    <h1>Groupie Tracker</h1>
-    <h1>Find here the next concert dates of your favorite bands.</h1>
+        <div>
+        <h1 class="title">Groupie Tracker</h1>
+         <br></br>
+        <h1 class="subtitle">Find here the next concert dates of your favorite bands.</h1>
+    </div>
     <div>
         {{ range .Tab }}
-
         <div class="container">
             <div class="card">
               <div class="box">
                 <div class="content">
-                    <img class="image" src="{{ .Image }}">
                     <h3>{{ .Name }}</h3>
+                    <img class="image" src="{{ .Image }}">
                   <h3> Member </h3>
                   <p>{{ range .Member }}
                     {{ . }}
                     <br></br>
                     {{end}}</p>
-                  <a href="#">Read More</a>
+                    <form method="POST" action="/"></form>
+                    <button class="myButton" name="ID" value="{{ .Locations }}">
+                        Locations
+                    </button>
+                    <br></br>
+                    <button class="myButton" name="ID" value="{{ .ConcertDates }}">
+                        Concert Dates
+                    </button>
+                    <br></br>
+                     <button class="myButton" name="ID" value="{{ .Relations }}">
+                    Relations
+                    </button>
                 </div>
               </div>
             </div>
         <h3>
-            <a href="{{ .Locations }}">Locations</a>
-            <br></br>
-            <a href="{{ .ConcertDates }}">Concert Dates</a>
-            <br></br>
-            <a href="{{ .Relations }}">Relations</a>
-            <br></br>
+
+
+                
+                <br></br>
+            </form>
         </h3>
         {{ end }}
     </div>

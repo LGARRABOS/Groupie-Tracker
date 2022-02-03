@@ -1,10 +1,15 @@
-h1 {
+.title {
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 75px;
+    font-family: monospace;
+    font-size: 55px;
     color: #fff;
 }
-
+.subtitle {
+    text-align: center;
+    font-family: monospace;
+    font-size: 35px;
+    color: #fff;
+}
 .home {
     text-align: left;
     font-family: fantasy;
@@ -39,8 +44,8 @@ body .container {
 
 body .container .card {
   position: relative;
-  min-width: 620px;
-  height: 740px;
+  min-width: 720px;
+  height: 840px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
@@ -134,4 +139,28 @@ body .container .card .box .content a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
   background: #fff;
   color: #000;
+}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px transparent;
+	background:linear-gradient(to bottom, transparent 5%, transparent 100%);
+	background-color:transparent;
+	border-radius:6px;
+	border:1px solid transparent;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px transparent;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, transparent 5%, transparent 100%);
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
