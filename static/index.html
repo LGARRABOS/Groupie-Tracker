@@ -11,41 +11,39 @@
 </head>
 
 <body>
-    <h1>Groupie Tracker</h1>
-    <p class="home">Find here the next concert dates of your favorite bands.</p>
+        <div>
+        <h1 class="title">Groupie Tracker</h1>
+         <br></br>
+        <h1 class="subtitle">Find here the next concert dates of your favorite bands.</h1>
+    </div>
     <div>
         {{ range .Tab }}
-        <h2>{{ .Name }}</h2>
-        <h3> Id </h3>
-        <p>{{ .Id }}</p>
-        <h3> Member </h3>
-        <p> {{ range .Member }}
-            {{ . }}
-            <br></br>
-            {{end}}
-        </p>
-        <h3> Creation </h3>
-        <p> {{ .CreationDate }} </p>
-        <h3> First album </h3>
-        <p> {{ .FirstAlbum }} </p>
-        <img class="image" src="{{ .Image }}">
-        <h3>
-            <form method="POST" action="/">
-                <button class="myButton" name="ID" value="{{ .Id }}" value="{{ .Locations }}">
-                    Locations
-                </button>
-                <br></br>
-                <button class="myButton" name="ID" value="{{ .ConcertDates }}">
-                    Concert Dates
-                </button>
-
-                <br></br>
-                <button class="myButton" name="ID" value="{{ .Relations }}">
+        <div class="container">
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <h3>{{ .Name }}</h3>
+                    <img class="image" src="{{ .Image }}">
+                  <h3> Member </h3>
+                  <p>{{ range .Member }}
+                    {{ . }}
+                    <br></br>
+                    {{end}}</p>
+                    <form method="POST" action="/"></form>
+                    <button class="myButton" name="ID" value="{{ .Locations }}">
+                        Locations
+                    </button>
+                    <br></br>
+                    <button class="myButton" name="ID" value="{{ .ConcertDates }}">
+                        Concert Dates
+                    </button>
+                    <br></br>
+                     <button class="myButton" name="ID" value="{{ .Relations }}">
                     Relations
-                </button>
-                <br></br>
-            </form>
-        </h3>
+                    </button>
+                </div>
+              </div>
+            </div>
         {{ end }}
     </div>
 
