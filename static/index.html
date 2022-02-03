@@ -30,12 +30,21 @@
         <p> {{ .FirstAlbum }} </p>
         <img class="image" src="{{ .Image }}">
         <h3>
-            <a href="{{ .Locations }}">Locations</a>
-            <br></br>
-            <a href="{{ .ConcertDates }}">Concert Dates</a>
-            <br></br>
-            <a href="{{ .Relations }}">Relations</a>
-            <br></br>
+            <form method="POST" action="/">
+                <button class="myButton" name="ID" value="{{ .Locations }}">
+                    Locations
+                </button>
+                <br></br>
+                <button class="myButton" name="ID" value="{{ .ConcertDates }}">
+                    Concert Dates
+                </button>
+
+                <br></br>
+                <button class="myButton" name="ID" value="{{ .Relations }}">
+                    Relations
+                </button>
+                <br></br>
+            </form>
         </h3>
         {{ end }}
     </div>
