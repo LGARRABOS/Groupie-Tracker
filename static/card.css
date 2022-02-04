@@ -74,7 +74,9 @@
      opacity : 1;
      transition-delay: 0.2s; 
   }
+
 .myButton {
-  position: relative;
-  top: -75%;
+  position: absolute;
+  top: 0%;
+  right: 10%;
 }
