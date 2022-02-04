@@ -74,9 +74,27 @@
      opacity : 1;
      transition-delay: 0.2s; 
   }
+<<<<<<< HEAD
 
 .myButton {
   position: absolute;
   top: 0%;
   right: 10%;
+=======
+  .bouton {
+    background: transparent;
+    border: none !important;
+    font-size:0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1400px;
+    top: 25px;
+}
+.maison {
+  width: 100px;
+  position: absolute;
+  left: 1400px;
+  top: 25px;
+>>>>>>> de72b7f41856cf18f06278dfbb0353d9b791cd0c
 }

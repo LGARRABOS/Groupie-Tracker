@@ -38,38 +38,16 @@ body {
   border-radius: 10px;  
 }
 
-.container .card .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #f00;
-  transition: 0.7s;
-  z-index: 1;
-}
-
-.container .card:nth-child(1) .icon {
-  background: #e07768;
-}
-
-.container .card:nth-child(2) .icon {
-  background: #6eadd4;
-}
-
-.container .card:nth-child(3) .icon {
-  background: #4aada9;
-}
-
-
-.container .card .icon .fa {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 80px;
-  transition: 0.7s;
-  color: #fff;
+body .container .card {
+  position: relative;
+  min-width: 720px;
+  height: 540px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
 }
 
 i {
