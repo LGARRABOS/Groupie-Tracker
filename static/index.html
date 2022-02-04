@@ -25,22 +25,23 @@
                     <h3>{{ .Name }}</h3>
                     <img class="image" src="{{ .Image }}">
                   <h3> Member </h3>
-                  <p>{{ range .Member }}
+                  <p class="Membre">{{ range .Member }}
                     {{ . }}
                     <br></br>
                     {{end}}</p>
-                    <form method="POST" action="/"></form>
-                    <button class="myButton" name="ID" value="{{ .Locations }}">
-                        Locations
-                    </button>
-                    <br></br>
-                    <button class="myButton" name="ID" value="{{ .ConcertDates }}">
-                        Concert Dates
-                    </button>
-                    <br></br>
-                     <button class="myButton" name="ID" value="{{ .Relations }}">
-                    Relations
-                    </button>
+                    <form method="POST" action="/">
+                        <button class="myButton" name="ID" value="{{ .Locations }}">
+                            Locations
+                        </button>
+                        <br></br>
+                        <button class="myButton" name="ID" value="{{ .ConcertDates }}">
+                            Concert Dates
+                        </button>
+                        <br></br>
+                        <button class="myButton" name="ID" value="{{ .Relations }}">
+                            Relations
+                        </button>
+                    </form>
                 </div>
               </div>
             </div>
