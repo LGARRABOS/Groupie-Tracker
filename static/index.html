@@ -26,8 +26,7 @@
                     <img class="image" src="{{ .Image }}">
                   <h3> Member </h3>
                   <p>{{ range .Member }}
-                    {{ . }}
-                    <br></br>
+                    {{ . }}, 
                     {{end}}</p>
                     <form method="POST" action="/"></form>
                     <button class="myButton" name="ID" value="{{ .Locations }}">
