@@ -18,14 +18,13 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		fmt.Printf("POST METHOD = %v\n", r.PostForm)
-		// m := r.PostForm
-		// id := m["ID"]
-
-		// if (lens(ID) != 0) {
-
-		// }
-
+		m := r.PostForm
+		st := m["ID"]
+		if len(st) != 0 {
+			number, apifile := SeparateString(st[0])
+			data1 := SubApiVerif(apifile, number)
+			fmt.Println(data1)
+		}
 	}
-
 	tmpl.Execute(w, data)
 }

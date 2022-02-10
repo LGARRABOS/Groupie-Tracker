@@ -7,51 +7,45 @@
     <title>Groupie Tracker</title>
     <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="boxe">
         <form name="search">
             <input type="text" class="input" name="txt" onmouseout="document.search.txt.value = ''">
         </form>
-            <i class="fas fa-search"></i>
+        <i class="fas fa-search"></i>
     </div>
-        <h1 class="title">Groupie Tracker</h1>
+    <h1 class="title">Groupie Tracker</h1>
     </div>
     <div>
-        {{ range .Tab }}
+        {{ range .TabArtist }}
         <div class="container">
             <div class="card">
-              <div class="box">
-                <div class="content">
-                    <h3>{{ .Name }}</h3>
-                    <img class="image" src="{{ .Image }}">
-                  <h3> Member </h3>
-                  <p>{{ range .Member }}
-                    {{ . }}, 
-                    {{end}}</p>
-                    <br></br>
-                    <h3> Creation </h3>
-                    <p> {{ .CreationDate }} </p>
-                    <br></br>
-                    <h3> First album </h3>
-                    <p> {{ .FirstAlbum }} </p>    
-                    <br></br>
-                    <p>_____________________________________________________________________________________________________________________________________________________</p>     
-                    <br></br>  
-                    <form method="POST" action="/"></form>
-                    <button class="myButton" name="ID" value="{{ .Locations }}">
-                        Locations
-                    </button>
-                    <br></br>
-                    <button class="myButton" name="ID" value="{{ .ConcertDates }}">
-                        Concert Dates
-                    </button>
-                    <br></br>
-                     <button class="myButton" name="ID" value="{{ .Relations }}">
-                    Relations
-                    </button>
+                <div class="box">
+                    <div class="content">
+                        <h3>{{ .Name }}</h3>
+                        <img class="image" src="{{ .Image }}">
+                        <h3> Member </h3>
+                        <p>{{ range .Member }}
+                            {{ . }},
+                            {{end}}</p>
+                        <form method="POST" action="/">
+                            <button class="myButton" name="ID" value="Locations {{ .Id }}">
+                                Locations
+                            </button>
+                            <br></br>
+                            <button class="myButton" name="ID" value="ConcertDates {{ .Id }}">
+                                Concert Dates
+                            </button>
+
+                            <br></br>
+                            <button class="myButton" name="ID" value="Relations {{ .Id }}">
+                                Relation
+                            </button>
+                        </form>
+                    </div>
                 </div>
-              </div>
             </div>
-        {{ end }}
-    </div>
+            {{ end }}
+        </div>
 </body>
