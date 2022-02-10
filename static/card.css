@@ -18,6 +18,7 @@
     align-items : center;
     justify-content : center;
     padding : 30px;  
+    flex-wrap: wrap;
   }
   
   .container .card {
@@ -75,7 +76,7 @@
      transition-delay: 0.2s; 
   }
   .bouton {
-    background: transparent;
+    background:transparent;
     border: none !important;
     font-size:0;
     width: 100px;
