@@ -10,9 +10,10 @@
 
 <body>
     <div class="boxe">
-        <form name="search">
-            <input type="text" class="input" name="txt" onmouseout="document.search.txt.value = ''">
-        </form>
+        <!-- <form name="search">
+            <input type="text" class="input" name="txt" onkeyup="myFunction()"
+                onmouseout="document.search.txt.value = ''">
+        </form> -->
         <i class="fas fa-search"></i>
     </div>
     <h1 class="title">Groupie Tracker</h1>
@@ -28,17 +29,14 @@
                         <h3> Member </h3>
                         <p>{{ range .Member }}
                             {{ . }},
-                            {{end}}</p>
+                            {{end}}
+                        </p>
+                        <h3>Creation date</h3>
+                        <p>{{ .CreationDate}}</p>
+                        <h3>First Album</h3>
+                        <p>{{ .FirstAlbum}}</p>
                         <form method="POST" action="/">
-                            <button class="myButton" name="ID" value="Locations {{ .Id }}">
-                                Locations
-                            </button>
-                            <br></br>
-                            <button class="myButton" name="ID" value="ConcertDates {{ .Id }}">
-                                Concert Dates
-                            </button>
 
-                            <br></br>
                             <button class="myButton" name="ID" value="Relations {{ .Id }}">
                                 Relation
                             </button>
