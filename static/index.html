@@ -6,37 +6,37 @@
     <link rel="stylesheet" href="/static/index.css">
     <title>Groupie Tracker</title>
     <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+    <script src="/static/searchbar.js"></script>
 </head>
 
 <body>
     <div class="boxe">
         <form name="search">
-            <input type="text" class="input" name="txt" onkeyup="myFunction()"
-                onmouseout="document.search.txt.value = ''">
+            <input type="text" class="input" name="txt" onmouseout="document.search.txt.value = ''" />
         </form>
         <i class="fas fa-search"></i>
     </div>
     <h1 class="title">Groupie Tracker</h1>
     </div>
-    <div>
+    <div id="card">
         {{ range .TabArtist }}
         <div class="container">
             <div class="card">
                 <div class="box">
                     <div class="content">
-                        <h3>{{ .Name }}</h3>
+                        <h3 id="name">{{ .Name }}</h3>
                         <img class="image" src="{{ .Image }}">
                         <h3> Member </h3>
-                        <p>{{ range .Member }}
+                        <p id="member">{{ range .Member }}
                             {{ . }},
                             {{end}}
                             <br></br>
                         </p>
                         <h3>Creation date</h3>
-                        <p>{{ .CreationDate}}</p>
+                        <p id="createDate">{{ .CreationDate}}</p>
                         <br></br>
                         <h3>First Album</h3>
-                        <p>{{ .FirstAlbum}}</p>
+                        <p id="albumDate">{{ .FirstAlbum}}</p>
                         <br></br>
                         <form method="POST" action="/">
 
@@ -44,14 +44,10 @@
                                 Relation
                             </button>
                         </form>
-                        <h3>Creation date</h3>
-                        <p>{{ .CreationDate}}</p>
-                        <h3>First Album</h3>
-                        <p>{{ .FirstAlbum}}</p>
-
                     </div>
                 </div>
             </div>
             {{ end }}
         </div>
+    </div>
 </body>

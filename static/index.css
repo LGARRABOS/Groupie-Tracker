@@ -26,8 +26,6 @@ body {
   flex-wrap: wrap;
   min-height: 100vh;
   background: #232427;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 body .container {
@@ -36,11 +34,10 @@ body .container {
   align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 40px 0;
-  
 }
 
 body .container .card {
+  display: flex;
   position: relative;
   min-width: 520px;
   height: 650px;
