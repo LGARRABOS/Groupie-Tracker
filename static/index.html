@@ -28,6 +28,15 @@
                   <p>{{ range .Member }}
                     {{ . }}, 
                     {{end}}</p>
+                    <br></br>
+                    <h3> Creation </h3>
+                    <p> {{ .CreationDate }} </p>
+                    <br></br>
+                    <h3> First album </h3>
+                    <p> {{ .FirstAlbum }} </p>    
+                    <br></br>
+                    <p>_____________________________________________________________________________________________________________________________________________________</p>     
+                    <br></br>  
                     <form method="POST" action="/"></form>
                     <button class="myButton" name="ID" value="{{ .Locations }}">
                         Locations
