@@ -12,6 +12,7 @@ type ArtistStruct struct {
 	TabArtist []Artist
 	TabLocations Locations
 	TabDates Dates
+	TabRelations Relations
 }
 
 type Artist struct {
@@ -35,11 +36,10 @@ type Dates struct {
 	Id	int `json:"id"`
 	Dates []string `json:"dates"`
 }
-
-
-
-
-
+type Relations struct {
+	Id int `json:"id"`
+	DatesLocations map[string][]string `json:"datesLocations"`
+}
 
 func APIRequestArtist() ArtistStruct {
 	var TabA []Artist
@@ -85,7 +85,12 @@ func APIRequest(apiloc string, who string) ArtistStruct {
 		}
 		return data
 	case "Relations":
-
+		var TabR Relations
+		json.Unmarshal(d, &TabR)
+		data := ArtistStruct {
+			TabRelations: TabR,
+		}
+		return data
 	}
 	return data
 }
