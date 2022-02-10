@@ -25,7 +25,6 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 			data1 := SubApiVerif(apifile, number)
 			fmt.Println(data1)
 		}
-
 	}
 	tmpl.Execute(w, data)
 }

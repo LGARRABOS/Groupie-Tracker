@@ -18,7 +18,7 @@
     <h1 class="title">Groupie Tracker</h1>
     </div>
     <div>
-        {{ range .Tab }}
+        {{ range .TabArtist }}
         <div class="container">
             <div class="card">
                 <div class="box">
@@ -29,19 +29,20 @@
                         <p>{{ range .Member }}
                             {{ . }},
                             {{end}}</p>
-                        <form method="POST" action="/"></form>
-                        <button class="myButton" name="ID" value="Locations {{ .Id }}">
-                            Locations
-                        </button>
-                        <br></br>
-                        <button class="myButton" name="ID" value="ConcertDates {{ .Id }}">
-                            Concert Dates
-                        </button>
+                        <form method="POST" action="/">
+                            <button class="myButton" name="ID" value="Locations {{ .Id }}">
+                                Locations
+                            </button>
+                            <br></br>
+                            <button class="myButton" name="ID" value="ConcertDates {{ .Id }}">
+                                Concert Dates
+                            </button>
 
-                        <br></br>
-                        <button class="myButton" name="ID" value="Relations {{ .Id }}">
-                            Relation
-                        </button>
+                            <br></br>
+                            <button class="myButton" name="ID" value="Relations {{ .Id }}">
+                                Relation
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
