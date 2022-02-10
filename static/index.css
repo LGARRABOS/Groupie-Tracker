@@ -26,6 +26,8 @@ body {
   flex-wrap: wrap;
   min-height: 100vh;
   background: #232427;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body .container {
@@ -35,19 +37,19 @@ body .container {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 40px 0;
+  
 }
 
 body .container .card {
   position: relative;
   min-width: 520px;
-  height: 550px;
+  height: 650px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 30px;
   transition: 0.5s;
-  
 }
 body .container .card .box {
   position: absolute;
