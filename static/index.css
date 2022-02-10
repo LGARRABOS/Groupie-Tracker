@@ -10,11 +10,6 @@
     font-size: 35px;
     color: #fff;
 }
-.home {
-    text-align: left;
-    font-family: fantasy;
-    font-size: 35px;
-}
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
 * {
@@ -31,6 +26,8 @@ body {
   flex-wrap: wrap;
   min-height: 100vh;
   background: #232427;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body .container {
@@ -40,6 +37,7 @@ body .container {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 40px 0;
+  
 }
 
 body .container .card {
@@ -52,7 +50,6 @@ body .container .card {
   border-radius: 15px;
   margin: 30px;
   transition: 0.5s;
-  
 }
 body .container .card .box {
   position: absolute;
