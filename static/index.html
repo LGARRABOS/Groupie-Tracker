@@ -30,11 +30,14 @@
                         <p>{{ range .Member }}
                             {{ . }},
                             {{end}}
+                            <br></br>
                         </p>
                         <h3>Creation date</h3>
                         <p>{{ .CreationDate}}</p>
+                        <br></br>
                         <h3>First Album</h3>
                         <p>{{ .FirstAlbum}}</p>
+                        <br></br>
                         <form method="POST" action="/">
 
                             <button class="myButton" name="ID" value="Relations {{ .Id }}">
