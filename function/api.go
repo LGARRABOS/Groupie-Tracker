@@ -60,7 +60,7 @@ func APIRequestArtist() ArtistStruct {
 
 
 
-func APIRequestLocations(apiloc string) ArtistStruct {
+func APIRequest(apiloc string, who string) ArtistStruct {
 	req, err := http.Get(apiloc)
 	if err != nil {
 		fmt.Println(err)
@@ -70,9 +70,20 @@ func APIRequestLocations(apiloc string) ArtistStruct {
 		fmt.Println(err2)
 	}
 	json.Unmarshal(d, &TabL)
-	data := ArtistStruct {
-		TabLocations: TabL,
+	switch who {
+	case "Locations" :
+		data := ArtistStruct {
+			TabLocations: TabL,
+		}
+	case "ConcertDates":
+
+	case "Relations":
+
 	}
+
+	
+	
+	
 	return data
 }
 

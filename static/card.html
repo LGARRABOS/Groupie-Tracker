@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/card.css">
+    <title>**Nom du groupe**</title>
+</head>
+<body>
+  <form method="POST" action="/">
+  <img src = "static/maison.png" class="maison">
+  <button class="bouton" value="accueil"></button>
+  </form>
+        <div class = container>
+          <div class = card>
+            <div class = image>
+              <img href = "#" src = "{{ .Image }}">
+            </div>
+            <div class = content>
+              <h3>This is content</h3>
+              <p>Lorem ispum.</p>
+            </div>
+          </div>
+  
+        </div>
+</body>
+</html>
