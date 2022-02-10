@@ -31,16 +31,17 @@
                             {{ . }},
                             {{end}}
                         </p>
-                        <h3>Creation date</h3>
-                        <p>{{ .CreationDate}}</p>
-                        <h3>First Album</h3>
-                        <p>{{ .FirstAlbum}}</p>
                         <form method="POST" action="/">
 
                             <button class="myButton" name="ID" value="Relations {{ .Id }}">
                                 Relation
                             </button>
                         </form>
+                        <h3>Creation date</h3>
+                        <p>{{ .CreationDate}}</p>
+                        <h3>First Album</h3>
+                        <p>{{ .FirstAlbum}}</p>
+
                     </div>
                 </div>
             </div>
