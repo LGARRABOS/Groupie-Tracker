@@ -14,16 +14,12 @@
     <h1>Groupie Tracker</h1>
     <p class="home">Find here the next concert dates of your favorite bands.</p>
     <div>
-        {{ range .Tab }}
+        {{ range .TabArtist }}
         <h2>{{ .Name }}</h2>
         <h3> Id </h3>
         <p>{{ .Id }}</p>
         <h3> Member </h3>
-        <p> {{ range .Member }}
-            {{ . }}
-            <br></br>
-            {{end}}
-        </p>
+        <p> {{ range .Member }} {{ . }} {{end}} </p>
         <h3> Creation </h3>
         <p> {{ .CreationDate }} </p>
         <h3> First album </h3>
@@ -31,16 +27,16 @@
         <img class="image" src="{{ .Image }}">
         <h3>
             <form method="POST" action="/">
-                <button class="myButton" name="ID" value="{{ .Id }}" value="{{ .Locations }}">
+                <button class="myButton" name="ID" value="Locations {{ .Id }}">
                     Locations
                 </button>
                 <br></br>
-                <button class="myButton" name="ID" value="{{ .ConcertDates }}">
+                <button class="myButton" name="ID" value="ConcertDates {{ .Id }}">
                     Concert Dates
                 </button>
 
                 <br></br>
-                <button class="myButton" name="ID" value="{{ .Relations }}">
+                <button class="myButton" name="ID" value="Relations {{ .Id }}">
                     Relations
                 </button>
                 <br></br>
