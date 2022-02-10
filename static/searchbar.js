@@ -1,0 +1,2 @@
+let tableauAvecTousLesArtistes = []
+let unSeulArtiste = ""

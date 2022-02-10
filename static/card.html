@@ -12,6 +12,7 @@
   <img src = "static/maison.png" class="maison">
   <button class="bouton" value="accueil"></button>
   </form>
+      {{ range .Tab }}
         <div class = container>
           <div class = card>
             <div class = image>
@@ -22,7 +23,7 @@
               <p>Lorem ispum.</p>
             </div>
           </div>
-  
+          {{ end }}
         </div>
 </body>
 </html>

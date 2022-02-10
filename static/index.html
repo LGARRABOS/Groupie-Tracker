@@ -13,7 +13,8 @@
 <body>
     <div class="boxe">
         <form name="search">
-            <input id="searchbar" type="text" class="input" name="txt" onmouseout="document.search.txt.value = ''">
+            <input type="text" class="input" name="txt" onkeyup="myFunction()"
+                onmouseout="document.search.txt.value = ''">
         </form>
         <i class="fas fa-search"></i>
     </div>
@@ -30,17 +31,17 @@
                         <h3> Member </h3>
                         <p>{{ range .Member }}
                             {{ . }},
-                            {{end}}</p>
+                            {{end}}
+                            <br></br>
+                        </p>
+                        <h3>Creation date</h3>
+                        <p>{{ .CreationDate}}</p>
+                        <br></br>
+                        <h3>First Album</h3>
+                        <p>{{ .FirstAlbum}}</p>
+                        <br></br>
                         <form method="POST" action="/">
-                            <button class="myButton" name="ID" value="Locations {{ .Id }}">
-                                Locations
-                            </button>
-                            <br></br>
-                            <button class="myButton" name="ID" value="ConcertDates {{ .Id }}">
-                                Concert Dates
-                            </button>
 
-                            <br></br>
                             <button class="myButton" name="ID" value="Relations {{ .Id }}">
                                 Relation
                             </button>
