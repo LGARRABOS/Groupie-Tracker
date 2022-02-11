@@ -37,7 +37,6 @@ body .container {
 }
 
 body .container .card {
-  display: flex;
   position: relative;
   min-width: 520px;
   height: 650px;
