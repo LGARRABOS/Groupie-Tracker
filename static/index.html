@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/index.css">
-    <script src="/static/index.js"></script>
+    <script src="/static/searchbar.js"></script>
     
     <title>Groupie Tracker</title>
     <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
@@ -13,8 +13,8 @@
 <body>
     <div class="boxe">
         <form name="search">
-            <input type="text" class="input" name="txt" onkeyup="myFunction()"
-                onmouseout="document.search.txt.value = ''">
+            <input type="text" class="input" name="txt" id="search"/>
+                <ul id="results"></ul>
         </form>
         <i class="fas fa-search"></i>
     </div>
@@ -31,6 +31,9 @@
                         <h3> Member </h3>
                         <p>{{ range .Member }}
                             {{ . }},
+                            <script>
+                                tableauAvecTousLesArtistes.push("{{ . }}")
+                            </script>
                             {{end}}
                             <br></br>
                         </p>

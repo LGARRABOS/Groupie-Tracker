@@ -169,3 +169,11 @@ i{
 .name {
   display: list-item;  
 }
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
