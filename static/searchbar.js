@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.querySelector("input").focus();
     document.body.querySelector("input").addEventListener("keyup", searchBar)
     function searchBar() {
-        var search = document.body.querySelector("input").value.toLowerCase();
+        let search = document.body.querySelector("input").value.toLowerCase();
         for (let index = 0; index < document.body.querySelectorAll("div.content").length; index++) {
             const member = document.body.querySelectorAll("div.content")[index].querySelector("p#member").innerText.toLowerCase();
             const createDate = document.body.querySelectorAll("div.content")[index].querySelector("p#createDate").innerText;

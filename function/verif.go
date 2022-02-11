@@ -1,6 +1,7 @@
 package groupie
 
 var data ArtistStruct
+
 func SubApiVerif(apifile string, number string) ArtistStruct {
 	path := ""
 	switch apifile {
