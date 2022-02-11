@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/index.css">
+    <script src="/static/searchbar.js"></script>
+    
     <title>Groupie Tracker</title>
     <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
     <script src="/static/searchbar.js"></script>
@@ -25,8 +27,8 @@
     <h1 class="title">Groupie Tracker</h1>
     </div>
     <div id="card">
-        {{ range .TabArtist }}
         <div class="container">
+            {{ range .TabArtist }}
             <div class="card">
                 <div class="box">
                     <div class="content">
@@ -35,6 +37,9 @@
                         <h3> Member </h3>
                         <p id="member">{{ range .Member }}
                             {{ . }},
+                            <script>
+                                tableauAvecTousLesArtistes.push("{{ . }}")
+                            </script>
                             {{end}}
                             <br></br>
                         </p>
