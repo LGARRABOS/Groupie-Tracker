@@ -15,11 +15,20 @@
         <input type="text" class="input" />
         <i class="fas fa-search"></i>
     </div>
-    <!-- <div class="slidecontainer">
-        <input type="range" min="1900" max="2022" value="1979" class="slider" id="myRange">
+    <!-- <div>
+        <span id="rangeValue">1900</span>
+        <Input class="range" type="range" value="0" min="1900" max="2010" onChange="rangeSlide(this.value)"
+            onmousemove="rangeSlide(this.value)"></Input>
     </div>
-    <div class="slidecontainer">
-        <input type="range" min="1900" max="2022" value="1979" class="slider" id="myRange">
+    <script type="text/javascript">
+        function rangeSlide(value) {
+            document.getElementById('rangeValue').innerHTML = value;
+        }
+    </script>
+    <div>
+        <span id="rangeValue">1900</span>
+        <Input class="range" type="range" value="0" min="1900" max="2010" onChange="rangeSlide(this.value)"
+            onmousemove="rangeSlide(this.value)"></Input>
     </div> -->
 
     <h1 class="title">Groupie Tracker</h1>
