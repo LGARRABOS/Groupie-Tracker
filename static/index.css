@@ -97,3 +97,9 @@ ul {
   height: 50px;
   text-align: right;
 }
+
+input {
+  position:relative;
+  top: 15px;
+  right: 15px;
+}
