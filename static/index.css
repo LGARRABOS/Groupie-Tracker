@@ -102,3 +102,16 @@ input {
   top: 15px;
   left: 85%;
 }
+.bouton {
+  background:transparent;
+  border: none !important;
+  font-size:0;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.maison {
+width: 100px;
+position: absolute;
+
+}
