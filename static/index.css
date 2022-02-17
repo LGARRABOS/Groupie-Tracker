@@ -97,7 +97,7 @@ ul {
   height: 50px;
 }
 
-input {
+.input {
   position:relative;
   top: 15px;
   left: 85%;
