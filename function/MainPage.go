@@ -26,5 +26,6 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 			fmt.Println(data1)
 		}
 	}
+
 	tmpl.Execute(w, data)
 }
