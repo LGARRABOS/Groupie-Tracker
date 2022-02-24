@@ -20,6 +20,11 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("POST METHOD = %v\n", r.PostForm)
 		m := r.PostForm
 		st := m["ID"]
+		choice := m["choix"]
+		create := m["creation"]
+		first := m["first"]
+		loc := m["location"]
+		fmt.Println(loc, first, create, choice)
 		if len(st) != 0 {
 			number, apifile := SeparateString(st[0])
 			data1 := SubApiVerif(apifile, number)
