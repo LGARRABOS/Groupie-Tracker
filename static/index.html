@@ -9,16 +9,53 @@
 </head>
 
 <body>
+
     <ul class="Navigation">
-           <input type="text" class="input" />
-           <i class="fas fa-search"></i>
+        <input type="text" class="input" />
+        <form method="POST" action="/">
+            <div>
+                <p>Creation date</p>
+                <span id="rangeValue">0</span>
+                <Input class="range" type="range" name="creation" value="" min="1958" max="2015"
+                    onChange="rangeSlide(this.value)" onmousemove="rangeSlide('rangeValue', this.value)"></Input>
+            </div>
+            <div>
+                <p>First album</p>
+                <span id="rangeValue2">0</span>
+                <Input class="range" type="range" name="first" value="" min="1963" max="2018"
+                    onChange="rangeSlide(this.value)" onmousemove="rangeSlide('rangeValue2', this.value)"></Input>
+            </div>
+            <script type="text/javascript">
+                function rangeSlide(id, value) {
+                    document.getElementById(id).innerHTML = value;
+                }
+            </script>
+            <div>
+                <p>number of menbers</p>
+                <INPUT type="checkbox" name="choix" value="1"> 1
+                <INPUT type="checkbox" name="choix" value="2"> 2
+                <INPUT type="checkbox" name="choix" value="3"> 3
+                <INPUT type="checkbox" name="choix" value="4"> 4
+                <INPUT type="checkbox" name="choix" value="5"> 5
+                <INPUT type="checkbox" name="choix" value="6"> 6
+                <INPUT type="checkbox" name="choix" value="7"> 7
+            </div>
+            <div>
+                <p>Location</p>
+                <select name="location" id="select-location">
+                    <option value="">--Choose a location--</option>
+                    {{ range .TabList }}
+                    <option value="{{.}}">{{.}}</option>
+                    {{ end }}
+                </select>
+            </div>
+            <button class="myButton">
+                Envoyer
+            </button>
+        </form>
     </ul>
-    <!-- <div class="slidecontainer">
-        <input type="range" min="1900" max="2022" value="1979" class="slider" id="myRange">
-    </div>
-    <div class="slidecontainer">
-        <input type="range" min="1900" max="2022" value="1979" class="slider" id="myRange">
-    </div> -->
+
+
     <br></br>
     <h1 class="title">Groupie Tracker</h1>
     </div>
