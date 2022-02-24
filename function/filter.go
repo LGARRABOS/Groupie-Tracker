@@ -1,7 +1,7 @@
 func Filter(loc string, first int, create int, members int) ArtistStruct {
 	for i = 1; i <= 52; i++ {
 		if locVerif(i, loc) && firstVerif(i, first) && createVerif(i, create) {
-
+			
 		}
 	}
 }
