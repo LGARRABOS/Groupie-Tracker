@@ -10,6 +10,7 @@ import  (
 
 type ArtistStruct struct {
 	TabArtist []Artist
+	TabOneArtist Artist
 	TabLocations Locations
 	TabDates Dates
 	TabRelations Relations
@@ -99,10 +100,10 @@ func APIRequest(apiloc string, who string) ArtistStruct {
 		}
 		return data
 	case "Artists" :
-		var TabA []Artist
-		json.Unmarshal(d, &TabA)
+		var TabO Artist
+		json.Unmarshal(d, &TabO)
 		data := ArtistStruct {
-			TabArtist: TabA,
+			TabOneArtist: TabO,
 			TabList: List(),
 		}
 		return data

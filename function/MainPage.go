@@ -27,7 +27,7 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 		create := m["creation"]
 		first := m["first"]
 		loc := m["location"]
-		fmt.Println(loc, first, create, choice)
+		data = Filter(loc, first, create, choice)
 		redir := m ["redir"]
 		if len(redir) != 0 {
 			if redir[0] == "home" {

@@ -16,13 +16,13 @@
             <div>
                 <p>Creation date</p>
                 <span id="rangeValue">0</span>
-                <Input class="range" type="range" name="creation" value="" min="1958" max="2015"
+                <Input class="range" type="range" name="creation" value="0" min="1957" max="2015"
                     onChange="rangeSlide(this.value)" onmousemove="rangeSlide('rangeValue', this.value)"></Input>
             </div>
             <div>
                 <p>First album</p>
                 <span id="rangeValue2">0</span>
-                <Input class="range" type="range" name="first" value="" min="1963" max="2018"
+                <Input class="range" type="range" name="first" value="0" min="1962" max="2018"
                     onChange="rangeSlide(this.value)" onmousemove="rangeSlide('rangeValue2', this.value)"></Input>
             </div>
             <script type="text/javascript">
@@ -92,7 +92,7 @@
         </div>
     </div>
     <form method="POST" action="/page">
-        <img src = "static/image.png" class="maison">
+        <img src="static/image.png" class="maison">
         <button class="bouton" name="redir" value="page"></button>
     </form>
 </body>
