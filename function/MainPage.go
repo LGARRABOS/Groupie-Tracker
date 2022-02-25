@@ -7,7 +7,7 @@ import (
 )
 
 func MainHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl := template.Must(template.ParseFiles("../static/map.html"))
+	tmpl := template.Must(template.ParseFiles("../static/index.html"))
 	js := template.Must(template.ParseFiles("../static/page.html"))
 	data := APIRequestArtist()
 	var start int
