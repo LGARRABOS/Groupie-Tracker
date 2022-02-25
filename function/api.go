@@ -15,6 +15,7 @@ type ArtistStruct struct {
 	TabDates Dates
 	TabRelations Relations
 	TabList []string
+	
 }
 
 type Artist struct {
