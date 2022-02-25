@@ -23,6 +23,11 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("POST METHOD = %v\n", r.PostForm)
 		m := r.PostForm
 		st := m["ID"]
+		choice := m["choix"]
+		create := m["creation"]
+		first := m["first"]
+		loc := m["location"]
+		data = Filter(loc, first, create, choice)
 		redir := m ["redir"]
 		if len(redir) != 0 {
 			if redir[0] == "home" {
