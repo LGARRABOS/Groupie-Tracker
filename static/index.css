@@ -97,28 +97,28 @@ ul {
 }
 .creation {
   position: relative;
-  top: -30px;
-  right: 20px;
+  bottom: 33px;
+  left: 0px;
 }
 .album {
   position: relative;
-  top: -72px;
-  right: -200px;
+  bottom: 70px;
+  left: 200px;
 }
 .membre {
   position: relative;
-  top: -115px;
-  right: -420px;
+  bottom: 110px;
+  left: 420px;
 }
 .location {
   position: relative;
-  top: -157px;
-  right: -720px;
+  bottom: 157px;
+  left: 720px;
 }
 .input {
   position:relative;
   top: 5px;
-  left: 85%;
+  left: 80%;
 }
 .Button {
   box-shadow:inset 0px 1px 0px 0px transparent;
@@ -135,6 +135,9 @@ ul {
   padding:6px 24px;
   text-decoration:none;
   text-shadow:0px 1px 0px transparent;
+  position:relative;
+  bottom: 187px;
+  left: 980px;
 }
 
 .Button:hover {
@@ -144,10 +147,7 @@ ul {
 
 .Button:active {
   position:relative;
-  top:1px;
+  bottom: 187px;
+  left: 980px;
 }
-.Button {
-  position:relative;
-  top: -187px;
-  right: -980px;
-}
+
