@@ -14,17 +14,18 @@
     <img src="static/maison.png" class="maison">
     <button class="bouton" value="home" name="redir"></button>
   </form>
-  <h1>{{ .TabOneArtist.Name }}</h1>
-  <div class=image>
-    <img href="#" src="{{ .TabOneArtist.Image }}">
-  </div>
-  {{range $location, $date := .TabRelations.DatesLocations}}
-  <h2>{{$location}}</h2>
-  {{ range $date}}
-  <p> {{ . }} </p>
-  {{ end }}
-  {{end}}
-
+  <div class="result">
+      <h1>{{ .TabOneArtist.Name }}</h1>
+      <div class=image>
+         <img href="#" src="{{ .TabOneArtist.Image }}">
+      </div class="place">
+       {{range $location, $date := .TabRelations.DatesLocations}}
+       <h2>{{$location}}</h2>
+        {{ range $date}}
+        <p> {{ . }} </p>
+         {{ end }}
+       {{end}}
+</div>
 </body>
 
 </html>
