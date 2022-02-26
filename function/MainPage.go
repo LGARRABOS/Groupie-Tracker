@@ -8,11 +8,9 @@ import (
 
 func MainHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("../static/index.html"))
-	js := template.Must(template.ParseFiles("../static/page.html"))
 	rel := template.Must(template.ParseFiles("../static/card.html"))
 	data := APIRequestArtist()
 	var start int
-	
 
 	switch r.Method {
 	case "GET":
@@ -29,7 +27,7 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 		first := m["first"]
 		loc := m["location"]
 		data = Filter(loc, first, create, choice)
-		redir := m ["redir"]
+		redir := m["redir"]
 		if len(redir) != 0 {
 			if redir[0] == "home" {
 				start = 0
@@ -52,8 +50,6 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	if start == 0 {
 		tmpl.Execute(w, data)
-	} else if start == 1 {
-		js.Execute(w, data)
 	} else if start == 2 {
 		rel.Execute(w, data)
 	}

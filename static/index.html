@@ -11,15 +11,18 @@
 <body>
 
     <ul class="Navigation">
-        <input type="text" class="input" />
-        <form method="POST" action="/">
-            <div>
+        <div class="input">
+            <p>Search</p>
+            <input type="text"/>
+            <form method="POST" action="/">
+        </div>
+            <div class="creation">
                 <p>Creation date</p>
                 <span id="rangeValue">0</span>
                 <Input class="range" type="range" name="creation" value="0" min="1957" max="2015"
                     onChange="rangeSlide(this.value)" onmousemove="rangeSlide('rangeValue', this.value)"></Input>
             </div>
-            <div>
+            <div class="album">
                 <p>First album</p>
                 <span id="rangeValue2">0</span>
                 <Input class="range" type="range" name="first" value="0" min="1962" max="2018"
@@ -30,7 +33,7 @@
                     document.getElementById(id).innerHTML = value;
                 }
             </script>
-            <div>
+            <div class="membre">
                 <p>number of menbers</p>
                 <INPUT type="checkbox" name="choix" value="1"> 1
                 <INPUT type="checkbox" name="choix" value="2"> 2
@@ -41,7 +44,7 @@
                 <INPUT type="checkbox" name="choix" value="7"> 7
                 <INPUT type="checkbox" name="choix" value="8"> 8
             </div>
-            <div>
+            <div class="location">
                 <p>Location</p>
                 <select name="location" id="select-location">
                     <option value="">--Choose a location--</option>
@@ -50,12 +53,11 @@
                     {{ end }}
                 </select>
             </div>
-            <button class="myButton">
+            <button class="Button">
                 Envoyer
             </button>
         </form>
     </ul>
-
 
     <br></br>
     <h1 class="title">Groupie Tracker</h1>
