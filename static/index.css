@@ -64,7 +64,6 @@ body .container .card .box .content p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.9);
 }
-
 .myButton {
     box-shadow:inset 0px 1px 0px 0px transparent;
     background:linear-gradient(to bottom, transparent 5%, transparent 100%);
@@ -94,24 +93,61 @@ body .container .card .box .content p {
 ul {
   background-color: rgb(51, 51, 153);
   display: block;
-  height: 50px;
+  height: 60px;
 }
-
+.creation {
+  position: relative;
+  top: -30px;
+  right: 20px;
+}
+.album {
+  position: relative;
+  top: -72px;
+  right: -200px;
+}
+.membre {
+  position: relative;
+  top: -115px;
+  right: -420px;
+}
+.location {
+  position: relative;
+  top: -157px;
+  right: -720px;
+}
 .input {
   position:relative;
-  top: 15px;
+  top: 5px;
   left: 85%;
 }
-.bouton {
-  background:transparent;
-  border: none !important;
-  font-size:0;
-  width: 100px;
-  height: 100px;
-  position: absolute;
+.Button {
+  box-shadow:inset 0px 1px 0px 0px transparent;
+  background:linear-gradient(to bottom, transparent 5%, transparent 100%);
+  background-color:transparent;
+  border-radius:6px;
+  border:1px solid transparent;
+  display:inline-block;
+  cursor:pointer;
+  color:white;
+  font-family:Verdana;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px transparent;
 }
-.maison {
-width: 100px;
-position: absolute;
 
+.Button:hover {
+  background:linear-gradient(to bottom, transparent 5%, transparent 100%);
+  background-color:transparent;
+}
+
+.Button:active {
+  position:relative;
+  top:1px;
+}
+.Button {
+  position:relative;
+  top: -187px;
+  right: -980px;
 }

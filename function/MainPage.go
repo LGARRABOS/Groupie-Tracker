@@ -8,10 +8,9 @@ import (
 
 func MainHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("../static/index.html"))
-	js := template.Must(template.ParseFiles("../static/page.html"))
+	rel := template.Must(template.ParseFiles("../static/card.html"))
 	data := APIRequestArtist()
 	var start int
-	
 
 	switch r.Method {
 	case "GET":
@@ -28,7 +27,7 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 		first := m["first"]
 		loc := m["location"]
 		data = Filter(loc, first, create, choice)
-		redir := m ["redir"]
+		redir := m["redir"]
 		if len(redir) != 0 {
 			if redir[0] == "home" {
 				start = 0
@@ -39,12 +38,19 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 		if len(st) != 0 {
 			number, apifile := SeparateString(st[0])
 			data1 := SubApiVerif(apifile, number)
-			fmt.Println(data1)
+			path := "https://groupietrackers.herokuapp.com/api/artists/" + number
+			data = APIRequest(path, "Artists")
+			path = "https://groupietrackers.herokuapp.com/api/locations/" + number
+			datalocation := APIRequest(path, "Locations")
+			data.TabLocations = datalocation.TabLocations
+			data.TabRelations = data1.TabRelations
+			fmt.Println(data)
+			start = 2
 		}
 	}
 	if start == 0 {
 		tmpl.Execute(w, data)
-	} else if start == 1 {
-		js.Execute(w, data)
+	} else if start == 2 {
+		rel.Execute(w, data)
 	}
 }

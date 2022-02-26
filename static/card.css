@@ -20,3 +20,13 @@ body {
   left: 1400px;
   top: 25px;
 }
+.result {
+  text-align: center;
+  color: #ffff;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 20px;
+}
