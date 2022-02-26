@@ -96,31 +96,37 @@ ul {
   height: 60px;
 }
 .creation {
+  width: 160px;
   position: relative;
   bottom: 33px;
   left: 0px;
 }
 .album {
+  width: 160px;
   position: relative;
   bottom: 70px;
   left: 200px;
 }
 .membre {
+  width: 160px;
   position: relative;
   bottom: 110px;
   left: 420px;
 }
 .location {
+  width: 160px;
   position: relative;
   bottom: 157px;
   left: 720px;
 }
 .input {
+  width: 160px;
   position:relative;
   top: 5px;
   left: 80%;
 }
 .Button {
+  width: 160px;
   box-shadow:inset 0px 1px 0px 0px transparent;
   background:linear-gradient(to bottom, transparent 5%, transparent 100%);
   background-color:transparent;
@@ -141,11 +147,13 @@ ul {
 }
 
 .Button:hover {
+  width: 160px;
   background:linear-gradient(to bottom, transparent 5%, transparent 100%);
   background-color:transparent;
 }
 
 .Button:active {
+  width: 160px;
   position:relative;
   bottom: 187px;
   left: 980px;
