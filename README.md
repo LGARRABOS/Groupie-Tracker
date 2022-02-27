@@ -20,17 +20,20 @@ go run .
 ### Barre de recherche <a name="p2.1"></a>
 
 Nous avons fais une barre de recherche qui fonctionne en live permettant de faire nos recherche sans que la page ne se rafraichisse.  
-Elle permet de rechercher : - par le nom du groupe,  
-                            - celui d'un membre,  
-                            - leur date de création  
-                            - la date de sortie de leur premier album.  
+Elle permet de rechercher : 
+- par le nom du groupe,  
+- celui d'un membre,  
+- leur date de création  
+- la date de sortie de leur premier album.  
 Elle se trouve en haut à droite de la page dans la barre bleue.  
 
 ### Filtres <a name="p2.2"></a>
 
 Nous avons également mis en place des filtres permettant de faire apparaitre seulement les groupes qui sont contenue dans les filtres.  
-On peut filtrer selon : - la location de leur concert,  
-                        - leur date de création,  
-                        - la date de sortie de leur premier album,  
-                        - leur nombre de membre.  
-Ils se trouve en haut à gauche de la page dans la barre bleue.
+On peut filtrer selon : 
+- la location de leur concert,  
+- leur date de création,  
+- la date de sortie de leur premier album,  
+- leur nombre de membre.  
+On peut également les activer en même temps pour des recherches encore plus précise.
+Ils se trouve en haut à gauche de la page dans la barre bleue.  
