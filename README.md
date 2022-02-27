@@ -25,6 +25,7 @@ Elle permet de rechercher :
 - celui d'un membre,  
 - leur date de création  
 - la date de sortie de leur premier album.  
+
 Elle se trouve en haut à droite de la page dans la barre bleue.  
 
 ### Filtres <a name="p2.2"></a>
@@ -35,5 +36,6 @@ On peut filtrer selon :
 - leur date de création,  
 - la date de sortie de leur premier album,  
 - leur nombre de membre.  
+
 On peut également les activer en même temps pour des recherches encore plus précise.
 Ils se trouve en haut à gauche de la page dans la barre bleue.  
