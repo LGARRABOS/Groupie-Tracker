@@ -32,7 +32,7 @@ Elle se trouve en haut à droite de la page dans la barre bleue.
 
 Nous avons également mis en place des filtres permettant de faire apparaitre seulement les groupes qui sont contenue dans les filtres.  
 On peut filtrer selon : 
-- la location de leur concert,  
+- la localisation de leur concert,  
 - leur date de création,  
 - la date de sortie de leur premier album,  
 - leur nombre de membre.  
