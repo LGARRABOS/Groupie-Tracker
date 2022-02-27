@@ -37,5 +37,5 @@ On peut filtrer selon :
 - la date de sortie de leur premier album,  
 - leur nombre de membre.  
 
-On peut également les activer en même temps pour des recherches encore plus précise.
+On peut également les activer en même temps pour des recherches encore plus précise.  
 Ils se trouve en haut à gauche de la page dans la barre bleue.  
